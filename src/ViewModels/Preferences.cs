@@ -205,6 +205,12 @@ namespace SourceGit.ViewModels
             set => SetProperty(ref _showChildren, value);
         }
 
+        public bool ShowContainingRefsInCommitDetail
+        {
+            get;
+            set;
+        } = false;
+
         public string IgnoreUpdateTag
         {
             get => _ignoreUpdateTag;
