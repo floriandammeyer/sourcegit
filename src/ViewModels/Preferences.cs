@@ -207,9 +207,9 @@ namespace SourceGit.ViewModels
 
         public bool ShowContainingRefsInCommitDetail
         {
-            get;
-            set;
-        } = false;
+            get => _showContainingRefsInCommitDetail;
+            set => SetProperty(ref _showContainingRefsInCommitDetail, value);
+        }
 
         public string IgnoreUpdateTag
         {
@@ -833,6 +833,7 @@ namespace SourceGit.ViewModels
         private bool _useGitHubStyleAvatar = true;
         private bool _showAuthorTimeInGraph = false;
         private bool _showChildren = false;
+        private bool _showContainingRefsInCommitDetail = false;
 
         private bool _check4UpdatesOnStartup = true;
         private double _lastCheckUpdateTime = 0;
